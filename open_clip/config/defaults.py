@@ -32,7 +32,7 @@ _C.TRAIN.CHECKPOINT_PERIOD = 1
 _C.TRAIN.AUTO_RESUME = False
 
 # Path to the checkpoint to load the initial weight.
-_C.TRAIN.CHECKPOINT_FILE_PATH = "../content/asol/models/vit_b_16_plus_240/checkpoint_4.pth" #"vit_b_16_plus_240-laion400m_e32-699c4b84.pt" #"./configs/MViTv2_T_in1k.pyth" # ./configs/MViTv2_B_in1k.pyth
+_C.TRAIN.CHECKPOINT_FILE_PATH = "../drive/My Drive/asol/models/vit_b_16_plus_240/checkpoint_4.pth" #"vit_b_16_plus_240-laion400m_e32-699c4b84.pt" #"./configs/MViTv2_T_in1k.pyth" # ./configs/MViTv2_B_in1k.pyth
 
 # If True, reset epochs when loading checkpoint.
 _C.TRAIN.CHECKPOINT_EPOCH_RESET = True
