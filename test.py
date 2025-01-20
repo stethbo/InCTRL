@@ -155,6 +155,11 @@ def main():
     """
     Main function to spawn the train and test process.
     """
+    print("Is CUDA available:", torch.cuda.is_available())
+    print("Number of GPUs:", torch.cuda.device_count())
+    if torch.cuda.is_available():
+        print("CUDA Device Name:", torch.cuda.get_device_name(0))
+    print(torch.version.cuda)
     args = parse_args()
     cfg = load_config(args)
     cfg = assert_and_infer_cfg(cfg)
