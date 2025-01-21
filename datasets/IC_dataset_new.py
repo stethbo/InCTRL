@@ -81,8 +81,11 @@ class IC_dataset(VisionDataset):
             self.normal_samples.extend(cur_normal)
         else:
             for idx, json_path in enumerate(normal_json_path_list):
-                cur_normal = json.load(open(json_path))
-                self.normal_samples.extend(cur_normal)
+                try:
+                    cur_normal = json.load(open(json_path))
+                    self.normal_samples.extend(cur_normal)
+                except Exception as e:
+                    print("failed to load:" json_path)
 
         if len(outlier_json_path_list) == 1:
             cur_outlier = json.load(open(outlier_json_path_list[0]))
