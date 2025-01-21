@@ -81,6 +81,7 @@ class IC_dataset(VisionDataset):
             self.normal_samples.extend(cur_normal)
         else:
             for idx, json_path in enumerate(normal_json_path_list):
+                print(json_path)
                 try:
                     cur_normal = json.load(open(json_path))
                     self.normal_samples.extend(cur_normal)
